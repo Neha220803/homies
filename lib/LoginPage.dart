@@ -59,7 +59,7 @@ class _LoginPageState extends State<LoginPage> {
                       'assets/g.png',
                       height: 24.0, // Adjust the height as needed
                     ),
-                    label: Text('Login with Google'),
+                    label: Text(' Login with Google'),
                   ),
                 ],
               ),
