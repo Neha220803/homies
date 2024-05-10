@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          // Background photo
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/login-bg.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          // Login button with Google
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 240),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'Homies',
+                    style: TextStyle(
+                      color: Color(0xFF222831),
+                      fontSize: 57.35,
+                      fontFamily: 'Oleo Script Swash Caps',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                      letterSpacing: 6.31,
+                    ),
+                  ),
+                  ElevatedButton.icon(
+                    onPressed: () {
+                      // Add your Google login logic here
+                    },
+                    icon: Image.asset(
+                      'assets/g.png',
+                      height: 24.0, // Adjust the height as needed
+                    ),
+                    label: Text('Login with Google'),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
